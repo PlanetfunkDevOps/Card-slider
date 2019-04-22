@@ -41,7 +41,7 @@ section {
 
 .inner-slide__bot, .inner-slide__top {
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.8s ease-in-out;
 }
 
 .inner-slide__bot.current-bot, .inner-slide__top.current-top {
@@ -57,14 +57,13 @@ section {
 
 .top{
   background:#333;
-  z-index:5;
+  z-index: -5;
   width:25vw;
 
   img {
     position: absolute;
     width:50vw;
     object-fit: cover;
-    /* object-position: 0%; */
     top: -75%;
     left: 35%;
     transform:translate(-75%, -75%);
@@ -117,7 +116,6 @@ section {
   background-color: #444;
   width: calc(1.15 * 25vw);
   height: calc(0.75 *25vw);
-  z-index: 7;
   top: 30%;
   left: -5%;
   padding: 2rem;
@@ -144,6 +142,18 @@ section {
     height: 100%; 
     background: transparent;
     z-index: 20;  
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%699C99AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    bottom: -1.5rem;
+    left: -1rem;
+    z-index: -1;
   }
 }
 
@@ -244,6 +254,6 @@ section {
   transform: rotate(45deg);
   background: #CCB666;
   top: 96%;
-  left: 39.3%;
+  left: 39.4%;
   z-index: 2;
 }
